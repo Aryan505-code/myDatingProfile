@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* @plugin "tailwindcss-motion"; */
+
+
+/* .great-vibes-regular {
+  font-family: "Great Vibes", serif;
+  font-weight:500;
+  font-style: normal;
+} */
+
+.slideRight{
+  animation: both;
+  animation-name: slideIn ;
+  animation-duration:  3000ms; 
+  animation-timeline:view(80% 5%);
+}
+
+@keyframes slideIn {
+  from{
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.heartSmoke1{
+  animation-name: heartSmoke1;
+  animation-duration: 3s; 
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes heartSmoke1 {
+  0%{
+    top:270px; 
+    left:230px;
+    opacity: 0.4;
+  }
+  60%{
+    top:250px;
+    left:230px;
+    opacity: 0.6;
+  }
+  100%{
+    top: 220px;
+    left: 220px;
+    opacity: 1;
+  }
+}
+
+
+.heartSmoke2{
+  animation-name: heartSmoke2;
+  animation-duration: 3s; 
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes heartSmoke2 {
+  0%{
+    top:250px; 
+    left:150px;
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50%{
+    top:220px;
+    left:150px;
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100%{
+    top: 180px;
+    left: 130px;
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@layer components {
+    .custom-scroll::-webkit-scrollbar {
+      width: 15px;
+    }
+  
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #93c5fd;
+      border-radius: 6px;
+    }
+  
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #2563eb;
+      border-radius: 6px;
+    }
+  }
+  
